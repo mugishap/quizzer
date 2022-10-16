@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Kdam+Thmor+Pro&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+*{
+  margin:0;
+  padding: 0;
+  transition: all 0.5s ease-in;
+  scroll-behavior: smooth;
+}
+
+input[type="radio"]:checked {
+  background: #3f7cac;
+  transform: scale(1.1);
+}
+
+input[type="radio"] {
+  border-radius: 5px;
+  width: 23px;
+  border: 2px solid #3f7cac;
+  height: 23px;
+  appearance: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background: #3f7cac;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="checkbox"] {
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  width: 23px;
+  border: 2px solid #3f7cac;
+  height: 23px;
+  appearance: none;
+  cursor: pointer;
+}
+
