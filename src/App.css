@@ -20,20 +20,3 @@ input[type="radio"] {
   appearance: none;
   cursor: pointer;
 }
-
-input[type="checkbox"]:checked {
-  background: #3f7cac;
-  transform: scale(1.1);
-  transition: all 0.3s ease-in-out;
-}
-
-input[type="checkbox"] {
-  transition: all 0.3s ease-in-out;
-  border-radius: 5px;
-  width: 23px;
-  border: 2px solid #3f7cac;
-  height: 23px;
-  appearance: none;
-  cursor: pointer;
-}
-

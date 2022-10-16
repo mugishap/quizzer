@@ -1,11 +1,11 @@
 
 export interface QuestionObject {
-    type: 'allThatApplies' | 'selectOne',
     questionText: string,
     name: string,
+    index: number
     answers: AnswerObject[]
-    validAnswers: string[]
-    selectedAnswers: string[]
+    validAnswer: string
+    selectedAnswer: string
 }
 
 export interface AnswerObject {
@@ -15,8 +15,8 @@ export interface AnswerObject {
 
 export const questions: QuestionObject[] = [
     {
-        type: 'allThatApplies',
         name: "question1",
+        index: 1,
         questionText: "What do you understand by programming? ",
         answers: [
             {
@@ -38,141 +38,145 @@ export const questions: QuestionObject[] = [
                 answer: "Act of keeping code"
             }
         ],
-        validAnswers: ['A'],
-        selectedAnswers: []
+        validAnswer: 'A',
+        selectedAnswer: ''
     }, {
-        type: 'allThatApplies',
-        name: "question1",
-        questionText: "What do you understand by programming? ",
+        name: "question2",
+        index: 2,
+        questionText: "Who discovered electricity? ",
         answers: [
             {
                 answerLetter: 'A',
-                answer: "The process or activity of writing computer programs"
+                answer: "Benjamin Franklin"
             },
             {
                 answerLetter: 'B',
-                answer: "The programs and other operating information used by a computer"
+                answer: "Thomas Edison"
             }, {
                 answerLetter: 'C',
-                answer: "Creating tutorial books"
+                answer: "Nikola Tesla"
             },
             {
                 answerLetter: 'D',
-                answer: "Writing softwares"
+                answer: "Albert Einstein"
             }, {
                 answerLetter: 'E',
-                answer: "Act of keeping code"
+                answer: "Isaac Newton"
             }
+
         ],
-        validAnswers: ['A'],
-        selectedAnswers: []
+        validAnswer: 'A',
+        selectedAnswer: ''
     }, {
-        type: 'allThatApplies',
-        name: "question1",
-        questionText: "What do you understand by programming? ",
-        answers: [
-            {
-                answerLetter: 'A',
-                answer: "The process or activity of writing computer programs"
-            },
-            {
-                answerLetter: 'B',
-                answer: "The programs and other operating information used by a computer"
-            }, {
-                answerLetter: 'C',
-                answer: "Creating tutorial books"
-            },
-            {
-                answerLetter: 'D',
-                answer: "Writing softwares"
-            }, {
-                answerLetter: 'E',
-                answer: "Act of keeping code"
-            }
-        ],
-        validAnswers: ['A'],
-        selectedAnswers: []
+        name: "question3",
+        index: 3,
+        questionText: "Who discovered the law of gravitation? ",
+        answers:
+            [
+                {
+                    answerLetter: 'A',
+                    answer: "Benjamin Franklin"
+                },
+                {
+                    answerLetter: 'B',
+                    answer: "Thomas Edison"
+                }, {
+                    answerLetter: 'C',
+                    answer: "Nikola Tesla"
+                },
+                {
+                    answerLetter: 'D',
+                    answer: "Albert Einstein"
+                }, {
+                    answerLetter: 'E',
+                    answer: "Isaac Newton"
+                }
+            ],
+        validAnswer: 'A',
+        selectedAnswer: ''
     }, {
-        type: 'allThatApplies',
-        name: "question1",
-        questionText: "What do you understand by programming? ",
+        name: "question4",
+        index: 4,
+        questionText: "Choose the correct answer, which is the best definition of a computer? ",
         answers: [
             {
                 answerLetter: 'A',
-                answer: "The process or activity of writing computer programs"
+                answer: "A machine that can be programmed to carry out sequences of arithmetic or logical operations automatically"
             },
             {
                 answerLetter: 'B',
-                answer: "The programs and other operating information used by a computer"
+                answer: "A book that teaches you how to program"
             }, {
                 answerLetter: 'C',
-                answer: "Creating tutorial books"
+                answer: "A library of programs"
             },
             {
                 answerLetter: 'D',
-                answer: "Writing softwares"
+                answer: "A person who writes programs"
             }, {
                 answerLetter: 'E',
-                answer: "Act of keeping code"
+                answer: "A person who keeps code"
             }
         ],
-        validAnswers: ['A'],
-        selectedAnswers: []
+        validAnswer: 'A',
+        selectedAnswer: ''
     }, {
-        type: 'allThatApplies',
-        name: "question1",
-        questionText: "What do you understand by programming? ",
-        answers: [
-            {
-                answerLetter: 'A',
-                answer: "The process or activity of writing computer programs"
-            },
-            {
-                answerLetter: 'B',
-                answer: "The programs and other operating information used by a computer"
-            }, {
-                answerLetter: 'C',
-                answer: "Creating tutorial books"
-            },
-            {
-                answerLetter: 'D',
-                answer: "Writing softwares"
-            }, {
-                answerLetter: 'E',
-                answer: "Act of keeping code"
-            }
-        ],
-        validAnswers: ['A'],
-        selectedAnswers: []
+        name: "question5",
+        index: 5,
+        questionText: "What is the name of the first computer? ",
+        answers:
+            [
+                {
+                    answerLetter: 'B',
+                    answer: "UNIVAC"
+                },
+                {
+                    answerLetter: 'A',
+                    answer: "ENIAC"
+                },
+                {
+                    answerLetter: 'C',
+                    answer: "EDVAC"
+                },
+                {
+                    answerLetter: 'D',
+                    answer: "EDSAC"
+                }, {
+                    answerLetter: 'E',
+                    answer: "UNIVAC"
+                }],
+        validAnswer: 'B',
+        selectedAnswer: ''
     }, {
-        type: 'allThatApplies',
-        name: "question1",
-        questionText: "What do you understand by programming? ",
-        answers: [
-            {
-                answerLetter: 'A',
-                answer: "The process or activity of writing computer programs"
-            },
-            {
-                answerLetter: 'B',
-                answer: "The programs and other operating information used by a computer"
-            }, {
-                answerLetter: 'C',
-                answer: "Creating tutorial books"
-            },
-            {
-                answerLetter: 'D',
-                answer: "Writing softwares"
-            }, {
-                answerLetter: 'E',
-                answer: "Act of keeping code"
-            }
-        ],
-        validAnswers: ['A'],
-        selectedAnswers: []
+        name: "question6",
+        index: 6,
+        questionText: "What is the name of the first computer programmer? ",
+        answers:
+            [
+                {
+                    answerLetter: 'A',
+                    answer: "Ada Lovelace"
+                },
+                {
+                    answerLetter: 'B',
+                    answer: "Grace Hopper"
+                },
+                {
+                    answerLetter: 'C',
+                    answer: "Alan Turing"
+                },
+                {
+                    answerLetter: 'D',
+                    answer: "Charles Babbage"
+                }, {
+                    answerLetter: 'E',
+                    answer: "John von Neumann"
+                }],
+        validAnswer: 'A',
+        selectedAnswer: ''
     }, {
-        type: 'allThatApplies',
-        name: "question1",
+        name: "question7",
+        index: 7,
         questionText: "What do you understand by programming? ",
         answers: [
             {
@@ -194,11 +198,11 @@ export const questions: QuestionObject[] = [
                 answer: "Act of keeping code"
             }
         ],
-        validAnswers: ['A'],
-        selectedAnswers: []
+        validAnswer: 'A',
+        selectedAnswer: ''
     }, {
-        type: 'allThatApplies',
-        name: "question1",
+        name: "question8",
+        index: 8,
         questionText: "What do you understand by programming? ",
         answers: [
             {
@@ -220,85 +224,64 @@ export const questions: QuestionObject[] = [
                 answer: "Act of keeping code"
             }
         ],
-        validAnswers: ['A'],
-        selectedAnswers: []
+        validAnswer: 'A',
+        selectedAnswer: ''
     }, {
-        type: 'allThatApplies',
-        name: "question1",
-        questionText: "What do you understand by programming? ",
-        answers: [
-            {
-                answerLetter: 'A',
-                answer: "The process or activity of writing computer programs"
-            },
-            {
-                answerLetter: 'B',
-                answer: "The programs and other operating information used by a computer"
-            }, {
-                answerLetter: 'C',
-                answer: "Creating tutorial books"
-            },
-            {
-                answerLetter: 'D',
-                answer: "Writing softwares"
-            }, {
-                answerLetter: 'E',
-                answer: "Act of keeping code"
-            }
-        ],
-        validAnswers: ['A'],
-        selectedAnswers: []
+        name: "question9",
+        index: 9,
+        questionText: "Describe the difference between a computer and a computer system. ",
+        answers:
+
+            [
+                {
+                    answerLetter: 'A',
+                    answer: "A computer is a machine that can be programmed to carry out sequences of arithmetic or logical operations automatically. A computer system is a combination of hardware and software that provides the capabilities for users to perform specific tasks."
+                },
+                {
+                    answerLetter: 'B',
+                    answer: "A computer is a machine that can be programmed to carry out cooking operations. A computer system is a combination of hardware and software that provides the capabilities for users to perform specific tasks."
+                }, {
+                    answerLetter: 'C',
+                    answer: "A computer is a machine that can be programmed to carry out masonry stuff. A computer system is a combination of hardware and software that provides the capabilities for users to perform specific tasks."
+                },
+                {
+                    answerLetter: 'D',
+                    answer: "A computer is a machine that can be programmed to carry out sequences of arithmetic or logical operations automatically. A computer system is a combination of hardware and software that provides the capabilities for users to perform specific tasks."
+                }, {
+                    answerLetter: 'E',
+                    answer: "A computer is a machine that can be programmed to carry out sequences of arithmetic or logical operations automatically. A computer system is a combination of hardware and software that provides the capabilities for users to perform specific tasks."
+                }
+            ],
+        validAnswer: 'A',
+        selectedAnswer: ''
     }, {
-        type: 'allThatApplies',
-        name: "question1",
-        questionText: "What do you understand by programming? ",
+        name: "question10",
+        index: 10,
+        questionText: "How many bits are in a byte? ",
         answers: [
             {
                 answerLetter: 'A',
-                answer: "The process or activity of writing computer programs"
+                answer: "8"
             },
             {
                 answerLetter: 'B',
-                answer: "The programs and other operating information used by a computer"
-            }, {
+                answer: "16"
+            },
+            {
                 answerLetter: 'C',
-                answer: "Creating tutorial books"
+                answer: "32"
             },
             {
                 answerLetter: 'D',
-                answer: "Writing softwares"
-            }, {
-                answerLetter: 'E',
-                answer: "Act of keeping code"
-            }
-        ],
-        validAnswers: ['A'],
-        selectedAnswers: []
-    }, {
-        type: 'allThatApplies',
-        name: "question1",
-        questionText: "What do you understand by programming? ",
-        answers: [
-            {
-                answerLetter: 'A',
-                answer: "The process or activity of writing computer programs"
+                answer: "64"
             },
             {
-                answerLetter: 'B',
-                answer: "The programs and other operating information used by a computer"
-            }, {
-                answerLetter: 'C',
-                answer: "Creating tutorial books"
-            },
-            {
-                answerLetter: 'D',
-                answer: "Writing softwares"
-            }, {
                 answerLetter: 'E',
-                answer: "Act of keeping code"
+                answer: "128"
             }
         ],
-        validAnswers: ['A'],
-        selectedAnswers: []
-    },
+        validAnswer: 'A',
+        selectedAnswer: ''
+
+    }
 ]
