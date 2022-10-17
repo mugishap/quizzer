@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { questions } from './data'
 
-function App() {
+const App = () => {
   const [activeIndex, setActiveIndex] = useState(0)
   const [questionsAndAnswers, setQuestionsAndAnswers] = useState(questions)
   const [showAnswers, setShowAnswers] = useState(false)
