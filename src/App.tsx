@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import { questions } from './data'
 
@@ -9,7 +8,6 @@ function App() {
   const [showAnswers, setShowAnswers] = useState(false)
 
   const handleSubmitQuiz = () => {
-    console.log(questionsAndAnswers)
     setShowAnswers(true)
   }
 
@@ -22,10 +20,14 @@ function App() {
   }
   const handleEnterAnswers = (e: any) => {
     const { value } = e.target
-    console.log(e.target)
+    e.target.checked = true;
     const newQuestions = [...questionsAndAnswers]
     newQuestions[activeIndex].selectedAnswer = value
     setQuestionsAndAnswers(newQuestions)
+  }
+
+  const handleRestartQuiz = () => {
+
   }
 
   return (
@@ -47,7 +49,7 @@ function App() {
         showAnswers ? (
           <div className='flex flex-col items-center justify-center'>
             <h1 className='text-2xl font-semibold text-black font-roboto'>Your Score</h1>
-            <div className='flex items-center justify-center'>
+            <div className='my-8 flex items-center justify-center'>
               <div className='flex flex-col items-center justify-center'>
                 <span className='text-5xl font-bold text-blue-700 font-cormorant'>{questionsAndAnswers.filter((question) => question.selectedAnswer === question.validAnswer).length}</span>
                 <span className='text-sm text-slate-400'>Correct Answers</span>
@@ -57,6 +59,7 @@ function App() {
                 <span className='text-sm text-slate-400'>Wrong Answers</span>
               </div>
             </div>
+            <button className='text-white px-8 py-2 bg-blue-600 font-roboto cursor-pointer rounded text-lg mx-3' onClick={handleRestartQuiz}>Restart</button>
           </div>
         )
           :
@@ -69,7 +72,7 @@ function App() {
               {questionsAndAnswers[activeIndex].answers.map((answer) => {
                 return (
                   <div className='pl-8 py-2 my-2 flex items-center justify-start'>
-                    <input onChange={handleEnterAnswers} value={answer.answerLetter} className='mr-3' type={'radio'} name={questionsAndAnswers[activeIndex].name} id="" />
+                    <input checked={answer.answerLetter===questionsAndAnswers[activeIndex].selectedAnswer} onChange={handleEnterAnswers} value={answer.answerLetter} className='mr-3' type={'radio'} name={questionsAndAnswers[activeIndex].name} id="" />
                     <span className='font-roboto text-lg'>{answer.answer}</span>
                   </div>
                 )

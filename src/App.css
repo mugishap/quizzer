@@ -10,6 +10,8 @@
 input[type="radio"]:checked {
   background: #3f7cac;
   transform: scale(1.1);
+  transition: all 0.2s ease-in;
+
 }
 
 input[type="radio"] {
@@ -19,4 +21,6 @@ input[type="radio"] {
   height: 23px;
   appearance: none;
   cursor: pointer;
+  transition: all 0.2s ease-in;
+
 }
